@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "genomeocean-classifier-pipeline"
+version = "0.1.0"
+description = "Four-class GenomeOcean pipeline composed of Main and Sub models"
+requires-python = ">=3.11"
+dependencies = [
+    "genomeocean-main-classifier",
+    "genomeocean-sub-classifier",
+    "pandas>=2.2,<3",
+    "pyyaml>=6,<7",
+]
+
+[project.scripts]
+genomeocean-classify = "genomeocean_pipeline.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<9",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
