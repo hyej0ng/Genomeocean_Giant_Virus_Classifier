@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "genomeocean-main-classifier"
+version = "0.1.0"
+description = "GenomeOcean main classifier for genomic FASTA files"
+requires-python = ">=3.11"
+dependencies = [
+    "torch>=2.8,<2.9",
+    "transformers==4.51.3",
+    "huggingface-hub>=0.36,<1",
+    "safetensors>=0.5,<1",
+    "numpy>=2.2,<3",
+    "pandas>=2.2,<3",
+]
+
+[project.scripts]
+genomeocean-main = "genomeocean_main.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<9",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
