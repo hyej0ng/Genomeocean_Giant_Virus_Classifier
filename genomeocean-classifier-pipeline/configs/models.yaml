@@ -1,11 +1,11 @@
 main:
-  model_id: your-org/genomeocean-main-100m-5kb
+  model_id: hyejong/genomeocean-main-classifier
   revision: main
   # One Hugging Face repository containing self-contained fold1..fold5 folders.
   folds: [fold1, fold2, fold3, fold4, fold5]
 
 sub:
-  model_id: your-org/genomeocean-sub-100m-5kb
+  model_id: hyejong/genomeocean-sub-classifier
   revision: main
   folds: [fold1, fold2, fold3, fold4, fold5]
 
