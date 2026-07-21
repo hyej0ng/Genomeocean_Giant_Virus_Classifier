@@ -50,6 +50,9 @@ python scripts/prepare_hf_folds.py \
   --checkpoint /path/to/sub/fold5/checkpoint-46130
 ```
 
+중간에 export가 중단되어 같은 output 폴더를 다시 사용할 때는 명령 끝에
+`--force`를 추가합니다. 원본 checkpoint는 변경하지 않습니다.
+
 생성된 output 디렉터리를 Hugging Face에 업로드합니다. Sub의 `fold6`은
 교차검증 fold가 아니라 전체 train 데이터 재학습용이므로 이 5-fold ensemble에는
 포함하지 않습니다.
