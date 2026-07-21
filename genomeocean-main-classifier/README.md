@@ -81,6 +81,10 @@ python scripts/prepare_hf_folds.py \
   --checkpoint /path/to/main/fold5/checkpoint-425970
 ```
 
+중간에 export가 중단되어 같은 output 폴더를 다시 사용할 때는 마지막에
+`--force`를 추가합니다. `--force`는 지정한 `fold1`~`fold5` output만 다시
+만들며 원본 checkpoint는 변경하지 않습니다.
+
 생성된 output 디렉터리 전체를 Hugging Face 모델 저장소에 업로드합니다.
 각 fold 안에 `config.json`, `configuration_mistral.py`,
 `modeling_mistral.py`, tokenizer, weight 파일이 있어야 합니다.
